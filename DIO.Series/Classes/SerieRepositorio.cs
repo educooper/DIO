@@ -7,6 +7,7 @@ namespace Dio.Series
 {
     public class SerieRepositorio : iRepositorio<Serie>
     {
+        private List<Serie> listaSerie = new List<Serie>();
         public void Atualiza(int id, Serie objeto)
         {
             listaSerie[id] = objeto; 
@@ -19,7 +20,7 @@ namespace Dio.Series
 
         public void Insere(Serie objeto)
         {
-            listaSerie[id].add(objeto);
+            listaSerie.Add(objeto);
         }
 
         public List<Serie> lista()
